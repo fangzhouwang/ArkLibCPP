@@ -10,6 +10,7 @@
 #define ArkCLP_test_hpp
 
 #include <gtest/gtest.h>
+#include "ArkCLP.hpp"
 
 class ArkCLPTest : public ::testing::Test {
 protected:

@@ -9,6 +9,29 @@
 #ifndef ArkCLP_hpp
 #define ArkCLP_hpp
 
-#include <stdio.h>
+#include <map>
+#include <string>
+#include <vector>
+
+#define __ArkCLP_VERSION "1.0.0"
+#define __ArkCLP_MAXSTRLEN  128
+
+class ArkCLP {
+    const int argc_;
+    const char ** argv_;
+    std::map<std::string, std::string> options_;
+    std::vector<std::string> values_;
+    
+    ArkCLP();   // calling default constructor is not allowed
+    void ParseCommandLine();
+    void AddOption(const char * arg);
+
+public:
+    ArkCLP(int argc_, char ** argv);
+    ArkCLP(int argc_, const char ** argv);
+    std::string GetOptionString(std::string key);
+    bool GetOptionInt(std::string key, int &val);
+    std::string operator[] (std::string key);
+};
 
 #endif /* ArkCLP_hpp */
