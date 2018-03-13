@@ -8,6 +8,8 @@
 
 #include "ArkCLP.hpp"
 
+#include <cstring>
+
 ArkCLP::ArkCLP(int argc, char ** argv) :
 ArkCLP(argc, (const char **) argv) {
 }
