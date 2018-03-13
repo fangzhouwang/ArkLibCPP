@@ -64,3 +64,12 @@ TEST(ArkCLPTest, AddOptionWithIntValueException) {
     int val = 0;
     EXPECT_THROW(clp.GetOptionInt("num", val), std::invalid_argument);
 }
+
+TEST(ArkCLPTest, AddValue) {
+    int argc = 2;
+    const char ** argv = new const char* [argc] ();
+    argv[0] = "program_name";
+    argv[1] = "num";
+    ArkCLP clp = ArkCLP(argc, argv);
+    EXPECT_TRUE(clp.GetValueString(1) == "num");
+}

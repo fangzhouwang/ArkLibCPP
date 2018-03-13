@@ -24,6 +24,17 @@ std::string ArkCLP::GetOptionString(std::string key) {
     return "";
 }
 
+std::string ArkCLP::GetValueString(int idx) {
+    if (idx < values_.size()) {
+        return values_[idx];
+    }
+    return "";
+}
+
+std::string ArkCLP::operator[](int idx) {
+    return GetValueString(idx);
+}
+
 std::string ArkCLP::operator[](std::string key) {
     return GetOptionString(key);
 }
@@ -34,6 +45,12 @@ bool ArkCLP::GetOptionInt(std::string key, int & val) {
         return true;
     }
     return false;
+}
+
+void ArkCLP::AddValue(const char * arg) {
+    if (strnlen(arg, __ArkCLP_MAXSTRLEN) >= __ArkCLP_MAXSTRLEN) return;
+    
+    values_.push_back(std::string(arg));
 }
 
 void ArkCLP::AddOption(const char * arg) {
@@ -58,6 +75,8 @@ void ArkCLP::ParseCommandLine() {
         arg = argv_[i];
         if (*arg == '-') {
             AddOption(arg);
+        } else {
+            AddValue(arg);
         }
     }
 }

@@ -25,13 +25,16 @@ class ArkCLP {
     ArkCLP();   // calling default constructor is not allowed
     void ParseCommandLine();
     void AddOption(const char * arg);
+    void AddValue(const char * arg);
 
 public:
     ArkCLP(int argc_, char ** argv);
     ArkCLP(int argc_, const char ** argv);
     std::string GetOptionString(std::string key);
+    std::string GetValueString(int idx);
     bool GetOptionInt(std::string key, int &val);
     std::string operator[] (std::string key);
+    std::string operator[] (int idx);
 };
 
 #endif /* ArkCLP_hpp */
