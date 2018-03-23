@@ -7,9 +7,11 @@
 //
 
 #include <iostream>
-#include "ArkCLP_test.hpp"
 
 int main(int argc, const char * argv[]) {
+    std::cout << "hello" << std::endl;
+    /*
     ::testing::InitGoogleTest(&argc, (char**)argv);
     return RUN_ALL_TESTS();
+     */
 }

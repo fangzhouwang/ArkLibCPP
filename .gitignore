@@ -34,21 +34,5 @@
 # Project files
 .idea/
 
-# # CMake related
-# cmake-build-debug/
-# CMakeCache.txt
-# CMakeFiles
-# CMakeScripts
-# Testing
-# Makefile
-# cmake_install.cmake
-# install_manifest.txt
-# compile_commands.json
-# CTestTestfile.cmake
-# *.pc
-# *.cbp
-# *.tcl
-# 
-# # Final products
-# runUnitTests
-# arklibexe
+# CMake related
+build/
