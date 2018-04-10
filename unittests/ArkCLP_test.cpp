@@ -10,7 +10,7 @@
 
 TEST(ArkCLPTest, AddOptionSingleDash) {
     int argc = 2;
-    const char ** argv = new const char* [argc] ();
+    const char **argv = new const char *[argc]();
     argv[0] = "program_name";
     argv[1] = "-num";
     ArkCLP clp = ArkCLP(argc, argv);
@@ -19,7 +19,7 @@ TEST(ArkCLPTest, AddOptionSingleDash) {
 
 TEST(ArkCLPTest, AddOptionMoreDashes) {
     int argc = 2;
-    const char ** argv = new const char* [argc] ();
+    const char **argv = new const char *[argc]();
     argv[0] = "program_name";
     argv[1] = "-----num";
     ArkCLP clp = ArkCLP(argc, argv);
@@ -28,7 +28,7 @@ TEST(ArkCLPTest, AddOptionMoreDashes) {
 
 TEST(ArkCLPTest, GetOptionWithBracket) {
     int argc = 2;
-    const char ** argv = new const char* [argc] ();
+    const char **argv = new const char *[argc]();
     argv[0] = "program_name";
     argv[1] = "-num=5";
     ArkCLP clp = ArkCLP(argc, argv);
@@ -37,7 +37,7 @@ TEST(ArkCLPTest, GetOptionWithBracket) {
 
 TEST(ArkCLPTest, AddOptionWithValue) {
     int argc = 2;
-    const char ** argv = new const char* [argc] ();
+    const char **argv = new const char *[argc]();
     argv[0] = "program_name";
     argv[1] = "-num=5";
     ArkCLP clp = ArkCLP(argc, argv);
@@ -46,7 +46,7 @@ TEST(ArkCLPTest, AddOptionWithValue) {
 
 TEST(ArkCLPTest, AddOptionWithIntValue) {
     int argc = 2;
-    const char ** argv = new const char* [argc] ();
+    const char **argv = new const char *[argc]();
     argv[0] = "program_name";
     argv[1] = "-num=5";
     ArkCLP clp = ArkCLP(argc, argv);
@@ -57,7 +57,7 @@ TEST(ArkCLPTest, AddOptionWithIntValue) {
 
 TEST(ArkCLPTest, AddOptionWithIntValueException) {
     int argc = 2;
-    const char ** argv = new const char* [argc] ();
+    const char **argv = new const char *[argc]();
     argv[0] = "program_name";
     argv[1] = "-num=x";
     ArkCLP clp = ArkCLP(argc, argv);
@@ -67,7 +67,7 @@ TEST(ArkCLPTest, AddOptionWithIntValueException) {
 
 TEST(ArkCLPTest, AddValue) {
     int argc = 2;
-    const char ** argv = new const char* [argc] ();
+    const char **argv = new const char *[argc]();
     argv[0] = "program_name";
     argv[1] = "num";
     ArkCLP clp = ArkCLP(argc, argv);
